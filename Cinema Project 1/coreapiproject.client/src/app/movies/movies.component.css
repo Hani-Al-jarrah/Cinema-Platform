@@ -1,0 +1,120 @@
+/* General styling */
+.filter-section {
+  background: linear-gradient(135deg, #f0f9ff, #ffffff);
+  padding: 60px 20px;
+  border-radius: 20px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+}
+
+.filter-area {
+  max-width: 700px;
+  margin: 0 auto;
+  animation: fadeIn 1s ease-in-out;
+  text-align: center;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.filter-title {
+  font-size: 2.2rem;
+  font-weight: 800;
+  color: #1e3a8a;
+  margin-bottom: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.form-label {
+  font-size: 1.2rem;
+  color: #0f172a;
+  margin-bottom: 12px;
+  display: block;
+}
+
+/* Select box styling */
+.category-select {
+  padding: 14px 20px;
+  font-size: 1.1rem;
+  border-radius: 10px;
+  border: 1px solid #cbd5e1;
+  background-color: #ffffff;
+  color: #1e293b;
+  width: 100%;
+  max-width: 420px;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+  cursor: pointer;
+}
+
+  .category-select:hover {
+    background-color: #f9fbff;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
+  }
+
+  .category-select:focus {
+    outline: none;
+    border-color: #3b82f6;
+    box-shadow: 0 0 0 5px rgba(59, 130, 246, 0.25);
+  }
+
+/* Option styling */
+option {
+  font-size: 1rem;
+  padding: 12px;
+  color: #1e293b;
+  background-color: #f8fafc;
+}
+
+/* Dark Mode Support */
+@media (prefers-color-scheme: dark) {
+  .filter-section {
+    background: #1e1e2f;
+    box-shadow: 0 10px 25px rgba(255, 255, 255, 0.1);
+  }
+
+  .filter-title,
+  .form-label,
+  option,
+  .category-select {
+    color: #ffffff;
+    background-color: #2a2a3c;
+    border-color: #555;
+  }
+
+    .category-select:hover {
+      background-color: #33354a;
+    }
+
+    .category-select:focus {
+      border-color: #7ab3f5;
+      box-shadow: 0 0 0 5px rgba(122, 179, 245, 0.25);
+    }
+}
+
+/* Responsive */
+@media (max-width: 767px) {
+  .category-select {
+    max-width: 100%;
+    font-size: 1rem;
+  }
+
+  .filter-title {
+    font-size: 1.7rem;
+  }
+
+  .form-label {
+    font-size: 1rem;
+  }
+}

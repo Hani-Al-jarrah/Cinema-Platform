@@ -1,0 +1,29 @@
+
+
+
+
+
+
+
+
+
+<ng-container *ngIf="isAdminRoute()">
+  <app-side-bar></app-side-bar>
+  <router-outlet></router-outlet>
+</ng-container>
+
+
+
+<!--<app-footer></app-footer>
+
+<app-show-timing></app-show-timing>-->
+
+
+
+
+<ng-container *ngIf="!isAdminRoute()">
+  <app-nav-bar></app-nav-bar>
+  <router-outlet></router-outlet>
+
+  <app-footer></app-footer>
+</ng-container>
